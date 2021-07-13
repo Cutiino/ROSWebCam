@@ -1,2 +1,2 @@
-
--DPYTHON_EXECUTABLE=/usr/bin/python3 -DCATKIN_DEVEL_PREFIX=/home/agustin/TareaRos/devel -DCMAKE_INSTALL_PREFIX=/home/agustin/TareaRos/install -G Unix Makefiles
+WebCam
+-DCATKIN_DEVEL_PREFIX=/home/agustin/TareaRos/devel -DCMAKE_INSTALL_PREFIX=/home/agustin/TareaRos/install -G Unix Makefiles

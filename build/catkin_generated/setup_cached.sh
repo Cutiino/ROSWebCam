@@ -7,7 +7,4 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/agustin/TareaRos/devel:$CMAKE_PREFIX_PATH"
 export PWD='/home/agustin/TareaRos/build'
-export ROSLISP_PACKAGE_DIRECTORIES='/home/agustin/TareaRos/devel/share/common-lisp'
-export ROS_PACKAGE_PATH="/home/agustin/TareaRos/src:$ROS_PACKAGE_PATH"
