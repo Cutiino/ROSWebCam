@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/listener.dir/nodes/listener.cpp.o  -o /home/agustin/TareaRos/devel/lib/usb_cam/listener 
