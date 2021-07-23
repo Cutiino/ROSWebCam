@@ -1,2 +1,2 @@
-SubCam:WebCam
+sub_cam:usb_cam
 -DCATKIN_DEVEL_PREFIX=/home/agustin/TareaRos/devel -DCMAKE_INSTALL_PREFIX=/home/agustin/TareaRos/install -G Unix Makefiles

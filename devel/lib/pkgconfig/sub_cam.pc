@@ -1,0 +1,8 @@
+prefix=/home/agustin/TareaRos/devel
+
+Name: sub_cam
+Description: Description of sub_cam
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

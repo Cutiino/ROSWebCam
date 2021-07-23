@@ -54,15 +54,15 @@ CMAKE_BINARY_DIR = /home/agustin/TareaRos/build
 
 # The main recursive "all" target.
 all: gtest/all
-all: SubCam/all
-all: WebCam/all
+all: sub_cam/all
+all: usb_cam/all
 
 .PHONY : all
 
 # The main recursive "preinstall" target.
 preinstall: gtest/preinstall
-preinstall: SubCam/preinstall
-preinstall: WebCam/preinstall
+preinstall: sub_cam/preinstall
+preinstall: usb_cam/preinstall
 
 .PHONY : preinstall
 
@@ -73,77 +73,10 @@ clean: CMakeFiles/clean_test_results.dir/clean
 clean: CMakeFiles/tests.dir/clean
 clean: CMakeFiles/download_extra_data.dir/clean
 clean: gtest/clean
-clean: SubCam/clean
-clean: WebCam/clean
+clean: sub_cam/clean
+clean: usb_cam/clean
 
 .PHONY : clean
-
-#=============================================================================
-# Directory level rules for directory SubCam
-
-# Recursive "all" directory target.
-SubCam/all:
-
-.PHONY : SubCam/all
-
-# Recursive "preinstall" directory target.
-SubCam/preinstall:
-
-.PHONY : SubCam/preinstall
-
-# Recursive "clean" directory target.
-SubCam/clean: SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-SubCam/clean: SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-SubCam/clean: SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-SubCam/clean: SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-SubCam/clean: SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-SubCam/clean: SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-SubCam/clean: SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-SubCam/clean: SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
-SubCam/clean: SubCam/CMakeFiles/roscpp_generate_messages_py.dir/clean
-SubCam/clean: SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-SubCam/clean: SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-SubCam/clean: SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-SubCam/clean: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-SubCam/clean: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-SubCam/clean: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-SubCam/clean: SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-
-.PHONY : SubCam/clean
-
-#=============================================================================
-# Directory level rules for directory WebCam
-
-# Recursive "all" directory target.
-WebCam/all: WebCam/CMakeFiles/usb_cam.dir/all
-WebCam/all: WebCam/CMakeFiles/usb_cam_node.dir/all
-
-.PHONY : WebCam/all
-
-# Recursive "preinstall" directory target.
-WebCam/preinstall:
-
-.PHONY : WebCam/preinstall
-
-# Recursive "clean" directory target.
-WebCam/clean: WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-WebCam/clean: WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-WebCam/clean: WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-WebCam/clean: WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
-WebCam/clean: WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-WebCam/clean: WebCam/CMakeFiles/usb_cam.dir/clean
-WebCam/clean: WebCam/CMakeFiles/usb_cam_node.dir/clean
-
-.PHONY : WebCam/clean
 
 #=============================================================================
 # Directory level rules for directory gtest
@@ -201,6 +134,73 @@ gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest_main.dir/clean
 gtest/googletest/clean: gtest/googletest/CMakeFiles/gtest.dir/clean
 
 .PHONY : gtest/googletest/clean
+
+#=============================================================================
+# Directory level rules for directory sub_cam
+
+# Recursive "all" directory target.
+sub_cam/all:
+
+.PHONY : sub_cam/all
+
+# Recursive "preinstall" directory target.
+sub_cam/preinstall:
+
+.PHONY : sub_cam/preinstall
+
+# Recursive "clean" directory target.
+sub_cam/clean: sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+sub_cam/clean: sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+.PHONY : sub_cam/clean
+
+#=============================================================================
+# Directory level rules for directory usb_cam
+
+# Recursive "all" directory target.
+usb_cam/all: usb_cam/CMakeFiles/usb_cam_node.dir/all
+usb_cam/all: usb_cam/CMakeFiles/usb_cam.dir/all
+
+.PHONY : usb_cam/all
+
+# Recursive "preinstall" directory target.
+usb_cam/preinstall:
+
+.PHONY : usb_cam/preinstall
+
+# Recursive "clean" directory target.
+usb_cam/clean: usb_cam/CMakeFiles/usb_cam_node.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/usb_cam.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+usb_cam/clean: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+
+.PHONY : usb_cam/clean
 
 #=============================================================================
 # Target rules for target CMakeFiles/doxygen.dir
@@ -447,868 +447,868 @@ gtest/googletest/CMakeFiles/gtest.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest.dir/clean
 
 #=============================================================================
-# Target rules for target SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir
+# Target rules for target sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_cpp: SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : std_msgs_generate_messages_cpp
-
-# clean rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_nodejs: SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_nodejs
-
-# clean rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_cpp: SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_cpp
-
-# clean rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_lisp: SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
-
-.PHONY : roscpp_generate_messages_lisp
-
-# clean rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-rosgraph_msgs_generate_messages_py: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
-
-.PHONY : rosgraph_msgs_generate_messages_py
-
-# clean rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_py: SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_py
-
-# clean rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_py: SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_py
-
-# clean rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_nodejs: SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_nodejs
-
-# clean rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_lisp: SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_lisp
-
-# clean rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_lisp: SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_lisp
-
-# clean rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_eus: SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
-
-.PHONY : std_msgs_generate_messages_eus
-
-# clean rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_nodejs: SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
-
-.PHONY : roscpp_generate_messages_nodejs
-
-# clean rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_cpp: SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
-
-.PHONY : roscpp_generate_messages_cpp
-
-# clean rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_eus: SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_eus
-
-# clean rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/roscpp_generate_messages_py.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_py.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_py.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_py.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_py.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/roscpp_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-# Convenience name for target.
-roscpp_generate_messages_py: SubCam/CMakeFiles/roscpp_generate_messages_py.dir/rule
-
-.PHONY : roscpp_generate_messages_py
-
-# clean rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_py.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_py.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_py.dir/clean
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_lisp: SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
-
-.PHONY : std_msgs_generate_messages_lisp
-
-# clean rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-sensor_msgs_generate_messages_cpp: SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
-
-.PHONY : sensor_msgs_generate_messages_cpp
-
-# clean rule for target.
-SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-.PHONY : SubCam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/std_msgs_generate_messages_py.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-# Convenience name for target.
-std_msgs_generate_messages_py: SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
-
-.PHONY : std_msgs_generate_messages_py
-
-# clean rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-geometry_msgs_generate_messages_eus: SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
-
-.PHONY : geometry_msgs_generate_messages_eus
-
-# clean rule for target.
-SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-.PHONY : SubCam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir
-
-# All Build rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
+sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_nodejs"
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-std_msgs_generate_messages_nodejs: SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
+std_msgs_generate_messages_nodejs: sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/rule
 
 .PHONY : std_msgs_generate_messages_nodejs
 
 # clean rule for target.
-SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
-.PHONY : SubCam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+# Target rules for target sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_py"
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_eus: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+std_msgs_generate_messages_py: sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_eus
+.PHONY : std_msgs_generate_messages_py
 
 # clean rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/clean
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+# Target rules for target sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_cpp"
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 
 # Build rule for subdir invocation for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_lisp: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+sensor_msgs_generate_messages_cpp: sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_cpp
 
 # clean rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_cpp.dir/clean
 
 #=============================================================================
-# Target rules for target SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+# Target rules for target sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_lisp"
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_nodejs: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+std_msgs_generate_messages_lisp: sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_nodejs
+.PHONY : std_msgs_generate_messages_lisp
 
 # clean rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+# Target rules for target sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_eus"
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-rosgraph_msgs_generate_messages_cpp: SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+sensor_msgs_generate_messages_eus: sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/rule
 
-.PHONY : rosgraph_msgs_generate_messages_cpp
+.PHONY : sensor_msgs_generate_messages_eus
 
 # clean rule for target.
-SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
-.PHONY : SubCam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target SubCam/CMakeFiles/roscpp_generate_messages_eus.dir
+# Target rules for target sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/all:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/depend
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/all
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_eus"
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-roscpp_generate_messages_eus: SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+geometry_msgs_generate_messages_eus: sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/rule
 
-.PHONY : roscpp_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_eus
 
 # clean rule for target.
-SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
-	$(MAKE) -f SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/clean
-.PHONY : SubCam/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir
+# Target rules for target sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_cpp"
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_eus"
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_cpp: WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+std_msgs_generate_messages_eus: sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/rule
 
-.PHONY : std_srvs_generate_messages_cpp
+.PHONY : std_msgs_generate_messages_eus
 
 # clean rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_eus.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir
+# Target rules for target sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_eus"
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_lisp"
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_eus: WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+geometry_msgs_generate_messages_lisp: sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : std_srvs_generate_messages_eus
+.PHONY : geometry_msgs_generate_messages_lisp
 
 # clean rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir
+# Target rules for target sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_lisp"
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_lisp"
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_lisp: WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+sensor_msgs_generate_messages_lisp: sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/rule
 
-.PHONY : std_srvs_generate_messages_lisp
+.PHONY : sensor_msgs_generate_messages_lisp
 
 # clean rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_lisp.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir
+# Target rules for target sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_nodejs"
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_nodejs"
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_nodejs: WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+sensor_msgs_generate_messages_nodejs: sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/rule
 
-.PHONY : std_srvs_generate_messages_nodejs
+.PHONY : sensor_msgs_generate_messages_nodejs
 
 # clean rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_nodejs.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/std_srvs_generate_messages_py.dir
+# Target rules for target sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/all:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_py"
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/all
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_py"
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-std_srvs_generate_messages_py: WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+geometry_msgs_generate_messages_py: sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/rule
 
-.PHONY : std_srvs_generate_messages_py
+.PHONY : geometry_msgs_generate_messages_py
 
 # clean rule for target.
-WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
-.PHONY : WebCam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/usb_cam.dir
+# Target rules for target sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/usb_cam.dir/all:
-	$(MAKE) -f WebCam/CMakeFiles/usb_cam.dir/build.make WebCam/CMakeFiles/usb_cam.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/usb_cam.dir/build.make WebCam/CMakeFiles/usb_cam.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num=9,10 "Built target usb_cam"
-.PHONY : WebCam/CMakeFiles/usb_cam.dir/all
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target sensor_msgs_generate_messages_py"
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/usb_cam.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/usb_cam.dir/all
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/usb_cam.dir/rule
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
 # Convenience name for target.
-usb_cam: WebCam/CMakeFiles/usb_cam.dir/rule
+sensor_msgs_generate_messages_py: sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/rule
 
-.PHONY : usb_cam
+.PHONY : sensor_msgs_generate_messages_py
 
 # clean rule for target.
-WebCam/CMakeFiles/usb_cam.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/usb_cam.dir/build.make WebCam/CMakeFiles/usb_cam.dir/clean
-.PHONY : WebCam/CMakeFiles/usb_cam.dir/clean
+sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/build.make sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
+.PHONY : sub_cam/CMakeFiles/sensor_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
-# Target rules for target WebCam/CMakeFiles/usb_cam_node.dir
+# Target rules for target sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
-WebCam/CMakeFiles/usb_cam_node.dir/all: WebCam/CMakeFiles/usb_cam.dir/all
-	$(MAKE) -f WebCam/CMakeFiles/usb_cam_node.dir/build.make WebCam/CMakeFiles/usb_cam_node.dir/depend
-	$(MAKE) -f WebCam/CMakeFiles/usb_cam_node.dir/build.make WebCam/CMakeFiles/usb_cam_node.dir/build
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_cpp"
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_cpp: sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_cpp
+
+# clean rule for target.
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target geometry_msgs_generate_messages_nodejs"
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+geometry_msgs_generate_messages_nodejs: sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : geometry_msgs_generate_messages_nodejs
+
+# clean rule for target.
+sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/build.make sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+.PHONY : sub_cam/CMakeFiles/geometry_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_msgs_generate_messages_cpp"
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_msgs_generate_messages_cpp: sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : std_msgs_generate_messages_cpp
+
+# clean rule for target.
+sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/build.make sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+.PHONY : sub_cam/CMakeFiles/std_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/usb_cam_node.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/usb_cam_node.dir/all: usb_cam/CMakeFiles/usb_cam.dir/all
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num=11,12 "Built target usb_cam_node"
-.PHONY : WebCam/CMakeFiles/usb_cam_node.dir/all
+.PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/all
 
 # Build rule for subdir invocation for target.
-WebCam/CMakeFiles/usb_cam_node.dir/rule: cmake_check_build_system
+usb_cam/CMakeFiles/usb_cam_node.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 4
-	$(MAKE) -f CMakeFiles/Makefile2 WebCam/CMakeFiles/usb_cam_node.dir/all
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam_node.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
-.PHONY : WebCam/CMakeFiles/usb_cam_node.dir/rule
+.PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/rule
 
 # Convenience name for target.
-usb_cam_node: WebCam/CMakeFiles/usb_cam_node.dir/rule
+usb_cam_node: usb_cam/CMakeFiles/usb_cam_node.dir/rule
 
 .PHONY : usb_cam_node
 
 # clean rule for target.
-WebCam/CMakeFiles/usb_cam_node.dir/clean:
-	$(MAKE) -f WebCam/CMakeFiles/usb_cam_node.dir/build.make WebCam/CMakeFiles/usb_cam_node.dir/clean
-.PHONY : WebCam/CMakeFiles/usb_cam_node.dir/clean
+usb_cam/CMakeFiles/usb_cam_node.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam_node.dir/build.make usb_cam/CMakeFiles/usb_cam_node.dir/clean
+.PHONY : usb_cam/CMakeFiles/usb_cam_node.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/usb_cam.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/usb_cam.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num=9,10 "Built target usb_cam"
+.PHONY : usb_cam/CMakeFiles/usb_cam.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/usb_cam.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/usb_cam.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/usb_cam.dir/rule
+
+# Convenience name for target.
+usb_cam: usb_cam/CMakeFiles/usb_cam.dir/rule
+
+.PHONY : usb_cam
+
+# clean rule for target.
+usb_cam/CMakeFiles/usb_cam.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/usb_cam.dir/build.make usb_cam/CMakeFiles/usb_cam.dir/clean
+.PHONY : usb_cam/CMakeFiles/usb_cam.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_py"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_py: usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/rule
+
+.PHONY : std_srvs_generate_messages_py
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_nodejs"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_nodejs: usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/rule
+
+.PHONY : std_srvs_generate_messages_nodejs
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_eus"
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_eus: usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/rule
+
+.PHONY : roscpp_generate_messages_eus
+
+# clean rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_nodejs"
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_nodejs: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_nodejs
+
+# clean rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_eus"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_eus: usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/rule
+
+.PHONY : std_srvs_generate_messages_eus
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/roscpp_generate_messages_py.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_py"
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_py: usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/rule
+
+.PHONY : roscpp_generate_messages_py
+
+# clean rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/clean
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_lisp"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_lisp: usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/rule
+
+.PHONY : std_srvs_generate_messages_lisp
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_nodejs"
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_nodejs: usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/rule
+
+.PHONY : roscpp_generate_messages_nodejs
+
+# clean rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_cpp"
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_cpp: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_cpp
+
+# clean rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_cpp"
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_cpp: usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/rule
+
+.PHONY : roscpp_generate_messages_cpp
+
+# clean rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target std_srvs_generate_messages_cpp"
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+std_srvs_generate_messages_cpp: usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/rule
+
+.PHONY : std_srvs_generate_messages_cpp
+
+# clean rule for target.
+usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/build.make usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+.PHONY : usb_cam/CMakeFiles/std_srvs_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_eus"
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_eus: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_eus
+
+# clean rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_lisp"
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_lisp: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_lisp
+
+# clean rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target roscpp_generate_messages_lisp"
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+roscpp_generate_messages_lisp: usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/rule
+
+.PHONY : roscpp_generate_messages_lisp
+
+# clean rule for target.
+usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/build.make usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+.PHONY : usb_cam/CMakeFiles/roscpp_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir
+
+# All Build rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/depend
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/agustin/TareaRos/build/CMakeFiles --progress-num= "Built target rosgraph_msgs_generate_messages_py"
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+	$(MAKE) -f CMakeFiles/Makefile2 usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/agustin/TareaRos/build/CMakeFiles 0
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+# Convenience name for target.
+rosgraph_msgs_generate_messages_py: usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/rule
+
+.PHONY : rosgraph_msgs_generate_messages_py
+
+# clean rule for target.
+usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
+	$(MAKE) -f usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
+.PHONY : usb_cam/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.
